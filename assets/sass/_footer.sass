@@ -1,0 +1,51 @@
+.footer
+    margin-top: 100px
+    // height: 100px
+    border-top: solid 2px $main-color
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+    &__copy
+        font-size: 24px
+        font-weight: 300
+        margin: 10px 0
+    &__agency
+        display: flex
+        flex-direction: column
+        border: solid 1px $main-color
+        background: lighten(silver, 22%)
+        border-radius: 30px
+        padding: 10px 20px
+        text-align: center
+    &-developer
+        display: flex
+        flex-direction: column
+        text-align: center
+        margin: 10px
+        &-wrap
+            display: flex
+            justify-content: center
+    &__vk-author
+        color: darken($main-color, 10%)
+        box-shadow: 0 3px 3px silver
+        margin-top: 5px
+        min-width: 100px
+        border-radius: 8px
+        padding: 5px
+        transition: 0.3s
+        &:hover
+            opacity: 0.7
+    &__who-did
+        font-weight: 300
+        
+@media screen and(max-width: 480px)
+    .footer__copy
+        text-align: center
+        width: 320px
+        font-size: 22px
+    .footer__agency
+        width: 360px
+@media screen and(max-width: 425px)
+    .footer__agency
+        width: 300px

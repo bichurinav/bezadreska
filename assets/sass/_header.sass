@@ -1,0 +1,325 @@
+.header
+    // Шапка - связь
+    &-communication
+        +center
+        height: 125px
+        // border: solid 1px tomato
+    
+    &-container
+        +between
+        align-items: center
+
+    &-logo
+        display: flex
+        align-items: center
+        &__name
+            width: 430px
+            letter-spacing: 0.36px
+            text-transform: uppercase
+            font-weight: 400
+            font-size: 32px
+            border-right: solid 2px #acacac
+        &__mark
+            margin: 0 15px
+        &__city
+            color: #949494
+            font-size: 28px
+            font-weight: 400
+        &__city_first-letter
+            color: $red
+            
+    &-contact
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        &__number
+            color: #39383a
+            font-size: 28px
+        &__email
+            font-size: 22px
+            font-weight: 400
+    
+    // Шапка - меню
+    &-menu
+        +center
+        height: 75px
+        background: $main-color
+        box-shadow: 0 0 29px rgba(172, 172, 172, 0.71)
+        .navbar
+            width: 780px
+            +between
+            &-btn
+                width: 50px
+                height: 40px
+                border: solid 1px darken($main-color, 2%)
+                display: none
+                flex-direction: column
+                justify-content: space-around
+                align-items: center
+                border-radius: 5px
+                box-shadow: 0 2px 4px gray
+                cursor: pointer
+                &__line
+                    width: 35px
+                    background: #f5f5f5
+                    height: 3px
+                    border-radius: 50px
+                &__line-2
+                    width: 28px
+                    align-self: flex-start
+                    margin-left: 2px
+
+            &__link
+                font-size: 20px
+                font-weight: 400
+                padding-bottom: 5px
+                transition: 0.2s
+                &:hover
+                    color: $black
+    
+    &-social
+        +between
+        align-items: center
+        width: 100px
+        &__icon
+            font-size: 35px
+            transition: 0.4s
+        &__icon-vk
+            &:hover
+                color: #45688E
+        &__icon-inst
+            &:hover
+                color: #d62976
+
+    // Шапка - txt + form
+    &-main
+        +center
+        height: 735px
+        background: url('../img/header/bg-header.jpg') no-repeat center
+        position: relative
+        background-size: cover
+        &:before
+            content: ''
+            position: absolute
+            width: 100%
+            height: 100%
+            background: black
+            opacity: 0.6
+            left: 0
+
+    &-info
+        position: relative
+        &__title
+            width: 610px
+            color: #ffffff
+            font-size: 42px
+            font-weight: 500
+            line-height: 60px
+            margin-bottom: 40px
+        &__line
+            width: 80px
+            border: solid 1px $main-color
+            margin-bottom: 3px
+        &__subtitle
+            width: 400px
+            color: #ffffff
+            font-size: 22px
+            font-weight: 300
+            line-height: 24px 
+        &__subtitle-1
+            margin-bottom: 23px   
+
+    &-form
+        width: 365px
+        position: relative
+        height: 468px
+        box-shadow: 11px 11px 0 darken(rgba(148, 148, 148, 0.7), 35)
+        border-radius: 14px
+        background-color: #ffffff
+        &__title
+            width: 100%
+            height: 80px
+            background-color: #a1a1ff
+            border-radius: 14px 14px 0 0
+            color: #ffffff
+            font-size: 28px
+            font-weight: 300
+            text-transform: uppercase
+            +full-center
+        .form
+            width: 100%
+            height: 468px - 80px
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-around
+            &__input-txt
+                width: 300px
+                height: 46px
+                border-radius: 7px
+                border: 2px solid #acacac
+                font-size: 18px
+                font-weight: 400
+                padding-left: 10px
+                color: darken(#acacac, 15)
+                &:focus
+                    border: solid 2px $main-color
+                &:nth-child(1) 
+                    margin-top: 10px
+            &__sms
+                width: 300px
+                height: 130px
+                border-radius: 7px
+                border: 2px solid #acacac
+                font-size: 18px
+                font-weight: 400
+                padding-left: 10px
+                font-family: Roboto, sans-serif
+                padding-top: 10px
+                margin-bottom: 10px
+                color: darken(#acacac, 15)
+                &:focus
+                    border: solid 2px $main-color
+            &__btn
+                width: 300px
+                height: 46px
+                border-radius: 7px
+                background-color: $red
+                border: none
+                text-transform: uppercase
+                font-size: 20px
+                color: #ffffff
+                cursor: pointer
+                transition: all 0.2s
+                margin-bottom: 10px
+                &:hover
+                    background: lighten($red, 5)
+
+.navbar-mobile
+    width: 100%
+    background: $main-color
+    position: absolute
+    z-index: 9999
+    left: 0
+    top: 0
+    display: none 
+    flex-direction: column
+    padding-left: 10px
+    justify-content: space-around
+    height: 230px
+    padding-bottom: 10px
+    align-items: center
+    border-radius: 0 0 5px 5px
+    &__link
+        font-size: 18px
+        text-transform: uppercase
+
+// АДАПТИВНОСТЬ
+@media screen and(max-width: 1210px)
+    .header-container
+        width: 940px
+
+@media screen and(max-width: 980px)
+    .header-main
+        height: 100% !important
+        padding-bottom: 30px
+    .navbar__link
+        font-size: 18px !important
+    .navbar
+        width: 600px !important
+    .header-container_main
+        flex-direction: column
+        align-items: center
+        height: 100%
+        // margin-top: 300px 
+    .header-info
+        margin: 40px 0
+        width: 100%
+        // margin: 0 auto
+    .header-main
+        height: 100vh
+    .header-info__title
+        width: 400px
+        font-size: 30px
+    .header-container
+        width: 850px
+
+@media screen and(max-width: 870px)
+    .header-menu
+        height: 65px
+    .header-container
+        width: 700px
+    .header-communication
+        height: 180px
+    .header-container_communication
+        flex-direction: column
+        justify-content: space-around
+    .navbar
+        display: none !important
+    .navbar-btn
+        display: flex !important
+    .header-contact
+        align-items: center
+    .header-contact__email
+        font-size: 22px
+
+@media screen and(max-width: 720px)
+    .header-container
+        width: 600px
+
+@media screen and(max-width: 630px)
+    .header-container
+        width: 560px
+    .header-logo__name
+        font-size: 30px
+    .header-logo__mark
+        height: 25px
+    .header-logo__city
+        font-size: 20px
+
+@media screen and(max-width: 570px)
+    .header-container
+        width: 400px
+    .header-logo
+        flex-direction: column
+        justify-content: space-around
+    .header-logo__name
+        width: 100%
+        border-right: none
+    .header-logo__mark
+        display: none
+    .header-contact__number
+        font-size: 24px
+    // .header-contact__email
+    //     font-size: 20px
+
+@media screen and(max-width: 420px)
+    .header-container_main
+        display: flex
+        width: 100%
+    .header-logo__name
+        font-size: 26px
+        width: 340px
+    .header-info__title
+        font-size: 28px
+        line-height: 40px
+        width: 300px
+    .header-info
+        padding-left: 5px
+    .navbar-btn
+        margin-left: 8px
+    .header-social
+        padding-right: 8px
+    .header-info__subtitle
+        font-size: 18px
+        width: 300px
+        padding-right: 3px
+    .header-form__title
+        font-size: 22px
+
+@media screen and(max-width: 350px)
+    .header-logo__name
+        font-size: 24px
+        text-align: center
+        width: 100%  
+

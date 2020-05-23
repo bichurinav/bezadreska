@@ -1,0 +1,121 @@
+.comments
+    +center
+    &-container
+        display: flex
+        flex-direction: column
+        width: 100%
+        &-title-block
+        display: flex
+        align-items: center
+        flex-direction: column
+    &-title-block
+        margin-top: 0px
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-bottom: 20px
+    &-slide
+        display: flex
+        position: relative
+        flex-direction: column
+        align-items: center
+        &__text
+            width: 650px
+            font-size: 20px
+            font-weight: 300
+            text-align: center
+            border: 5px solid #a1a1ff
+            border-radius: 35px
+            padding: 40px 10px
+        &__person
+            display: flex
+            flex-direction: column
+            align-items: center
+        &__name
+            font-size: 25px
+            margin-top: 8px
+            font-weight: 500
+            color: #646464
+        &__data
+            font-size: 18px
+            font-weight: 300
+            color: #646464
+        &__img
+            width: 100px
+            height: 100px
+            border-radius: 100px
+            margin-top: 12px
+            box-shadow: 0 7px 14px 1px rgba(161, 161, 255, 0.75)
+            margin-bottom: 20px
+
+.block-arrow
+    display: flex
+    justify-content: space-between
+    position: relative
+    top: 120px
+    z-index: 999999
+    .arrow
+        cursor: pointer
+        transition: 0.3s
+        &:hover
+            opacity: 0.7
+
+.prev-arrow
+    margin-left: 400px
+.next-arrow
+    margin-right: 400px
+
+@media screen and(max-width: 1550px)
+    .prev-arrow
+        margin-left: 350px
+
+    .next-arrow
+        margin-right: 350px
+@media screen and(max-width: 1576px)
+    .prev-arrow
+        margin-left: 300px
+
+    .next-arrow
+        margin-right: 300px
+@media screen and(max-width: 1354px)
+    .prev-arrow
+        margin-left: 250px
+    .next-arrow
+        margin-right: 250px
+@media screen and(max-width: 1268px)
+    .prev-arrow
+        margin-left: 200px
+    .next-arrow
+        margin-right: 200px
+@media screen and(max-width: 1152px)
+    .prev-arrow
+        margin-left: 150px
+    .next-arrow
+        margin-right: 150px
+@media screen and(max-width: 1054px)
+    .prev-arrow
+        margin-left: 100px
+    .next-arrow
+        margin-right: 100px
+@media screen and(max-width: 962px)
+    .prev-arrow
+        margin-left: 1px
+    .next-arrow
+        margin-right: 1px
+@media screen and(max-width: 766px)
+    .prev-arrow
+        margin-left: 1px
+        display: none !important
+    .next-arrow
+        margin-right: 1px
+        display: none !important
+@media screen and(max-width: 666px)
+    .slider
+        display: flex
+        width: 100%
+    .comments-slide
+        width: 100%
+    .comments-slide__text
+        width: 100%
+
+        

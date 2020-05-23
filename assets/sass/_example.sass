@@ -1,0 +1,69 @@
+.example
+    +center
+    &-container
+        display: flex
+        flex-direction: column
+    &-title-block
+        display: flex
+        align-items: center
+        flex-direction: column
+    &__title
+        margin-top: 90px
+        margin-bottom: 40px
+    &-img-block
+        display: flex
+        justify-content: space-around
+
+        &_group-img
+            display: flex
+            flex-direction: column
+            // justify-content: space-between
+    &__img-1, &__img-2, &__img-3
+        border-radius: 15px
+        box-shadow: 0 5px 10px $main-color
+    &__img-1
+        width: 450px
+        height: 100%
+        display: flex
+    &__img-2
+        width: 1170px - 500px
+        height: 400px
+        margin-bottom: 20px
+    &__img-3
+        width: 1170px - 500px
+        height: 400px
+
+@media screen and(max-width: 1200px)
+    .example-container
+        width: 100%
+    .example-img-block
+        flex-direction: column
+        align-items: center
+    .example img
+        width: 650px
+        margin-bottom: 20px
+    .example__img-1
+        height: 700px
+        width: 400px !important
+    // 
+
+@media screen and(max-width: 662px)
+    .example-img-block_group-img
+        display: flex
+        justify-content: center
+        align-items: center
+    .example img
+        width: 90%
+    .example__img-1
+        height: 650px
+@media screen and(max-width: 480px)
+    .example__img-1
+        width: 90% !important
+    .example__img-2, .example__img-3
+        height: 300px
+@media screen and(max-width: 408px)
+    .example__img-1
+        // width: 100% !important
+    .example__img-2, .example__img-3
+        height: 250px
+    

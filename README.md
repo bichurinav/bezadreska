@@ -1,5 +1,4 @@
-bezadreska (landing page) 
-[bezadreska59.ru](https://bezadreska59.ru/)
+[bezadreska59.ru](https://bezadreska59.ru/) (landing page) 
 =======
 * JQuery,
 * HTML,
